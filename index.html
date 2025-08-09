@@ -287,34 +287,34 @@
   <style>
     .skills-section {
       background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
-      padding: 60px 0 40px 0;
-      margin: 60px 0 0 0;
-      border-radius: 30px;
+      padding: 48px 0 32px 0;
+      margin: 48px 0 0 0;
+      border-radius: 24px;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       position: relative;
       overflow: hidden;
     }
     .skills-title {
       text-align: center;
-      font-size: 2.2em;
+      font-size: 2em;
       color: #00ffe7;
       letter-spacing: 2px;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       text-shadow: 0 0 10px #00ffe7, 0 0 20px #0ff;
     }
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 32px;
+      gap: 24px;
     }
     .skill-card {
       background: rgba(255,255,255,0.05);
       border: 1.5px solid rgba(0,255,231,0.2);
-      border-radius: 18px;
+      border-radius: 16px;
       box-shadow: 0 4px 24px 0 rgba(0,255,231,0.08);
-      padding: 32px 24px;
-      width: 260px;
+      padding: 28px 18px;
+      width: 240px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -329,8 +329,8 @@
       border: 1.5px solid #00ffe7;
     }
     .skill-icon {
-      font-size: 2.5em;
-      margin-bottom: 18px;
+      font-size: 2em;
+      margin-bottom: 14px;
       color: #00ffe7;
       text-shadow: 0 0 12px #00ffe7, 0 0 24px #0ff;
       animation: neon-glow 1.5s infinite alternate;
@@ -340,28 +340,107 @@
       to { text-shadow: 0 0 24px #00ffe7, 0 0 48px #0ff; }
     }
     .skill-name {
-      font-size: 1.2em;
+      font-size: 1.1em;
       font-weight: bold;
       color: #fff;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       letter-spacing: 1px;
       text-shadow: 0 0 6px #00ffe7;
     }
     .skill-desc {
       color: #b2f7ef;
-      font-size: 1em;
+      font-size: 0.97em;
       text-align: center;
       line-height: 1.5;
       text-shadow: 0 0 4px #0ff2;
     }
+    /* Responsive for laptop (max-width: 1200px) */
+    @media (max-width: 1200px) {
+      .skills-section {
+        padding: 36px 0 24px 0;
+        margin: 36px 0 0 0;
+        border-radius: 18px;
+      }
+      .skills-title {
+        font-size: 1.7em;
+        margin-bottom: 24px;
+      }
+      .skills-list {
+        gap: 18px;
+      }
+      .skill-card {
+        width: 200px;
+        padding: 20px 12px;
+      }
+      .skill-icon {
+        font-size: 1.7em;
+        margin-bottom: 10px;
+      }
+      .skill-name {
+        font-size: 1em;
+      }
+      .skill-desc {
+        font-size: 0.93em;
+      }
+    }
+    /* Responsive for tablet and hp (max-width: 900px) */
     @media (max-width: 900px) {
+      .skills-section {
+        padding: 24px 0 16px 0;
+        margin: 24px 0 0 0;
+        border-radius: 12px;
+      }
+      .skills-title {
+        font-size: 1.3em;
+        margin-bottom: 18px;
+      }
       .skills-list {
         flex-direction: column;
         align-items: center;
+        gap: 14px;
       }
       .skill-card {
-        width: 90%;
-        margin-bottom: 24px;
+        width: 92vw;
+        max-width: 340px;
+        padding: 16px 8px;
+        margin-bottom: 12px;
+      }
+      .skill-icon {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+      }
+      .skill-name {
+        font-size: 0.98em;
+      }
+      .skill-desc {
+        font-size: 0.91em;
+      }
+    }
+    /* Extra small devices (max-width: 500px) */
+    @media (max-width: 500px) {
+      .skills-section {
+        padding: 12px 0 8px 0;
+        margin: 12px 0 0 0;
+        border-radius: 8px;
+      }
+      .skills-title {
+        font-size: 1em;
+        margin-bottom: 10px;
+      }
+      .skill-card {
+        width: 96vw;
+        max-width: 98vw;
+        padding: 10px 4px;
+      }
+      .skill-icon {
+        font-size: 1em;
+        margin-bottom: 6px;
+      }
+      .skill-name {
+        font-size: 0.92em;
+      }
+      .skill-desc {
+        font-size: 0.88em;
       }
     }
   </style>
