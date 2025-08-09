@@ -1,6 +1,6 @@
 # README
 
-## Deskripsi
+## Belajar Git
 
 Repository ini berisi source code untuk **belajar git**. Proyek ini dikembangkan menggunakan [bahasa pemrograman/teknologi yang digunakan, misal: Python, JavaScript, dsb.], dan bertujuan untuk [deskripsi singkat tujuan proyek, misal: membangun aplikasi web, melakukan analisis data, dsb.].
 
