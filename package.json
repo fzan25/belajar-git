@@ -1,0 +1,19 @@
+{
+  "name": "belajar-git",
+  "version": "1.0.0",
+  "description": "Repository ini berisi source code untuk **belajar git**. Proyek ini dikembangkan menggunakan [bahasa pemrograman/teknologi yang digunakan, misal: Python, JavaScript, dsb.], dan bertujuan untuk [deskripsi singkat tujuan proyek, misal: membangun aplikasi web, melakukan analisis data, dsb.].",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzan25/belajar-git.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fzan25/belajar-git/issues"
+  },
+  "homepage": "https://github.com/fzan25/belajar-git#readme"
+}
