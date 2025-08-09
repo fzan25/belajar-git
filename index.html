@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio Fauzan Najmi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        :root {
+            --primary: #1e1e2f;
+            --secondary: #28293e;
+            --accent: #00c6a7;
+            --text: #f5f6fa;
+            --muted: #a0a3b1;
+            --card: #23243a;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        header {
+            background: var(--secondary);
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--accent);
+        }
+        header p {
+            color: var(--muted);
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+        h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            margin-bottom: 0.7rem;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+        .skill {
+            background: var(--secondary);
+            color: var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: var(--card);
+            border-radius: 10px;
+            padding: 1.2rem;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+            transition: box-shadow 0.2s;
+        }
+        .project-card:hover {
+            box-shadow: 0 4px 16px rgba(0,198,167,0.15);
+        }
+        .project-title {
+            color: var(--accent);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .project-desc {
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+        .contact {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            background: var(--secondary);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .contact a:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fauzan Najmi</h1>
+        <p>Web Developer &amp; Enthusiast | Passionate about Technology &amp; Design</p>
+    </header>
+    <main>
+        <section>
+            <div class="card">
+                <h2>Tentang Saya</h2>
+                <p>
+                    Halo! Saya <b>Fauzan Najmi</b>, seorang web developer yang suka membangun aplikasi web modern dengan desain menarik dan fungsionalitas yang optimal. Saya memiliki minat besar pada pengembangan front-end maupun back-end, serta selalu bersemangat untuk belajar teknologi baru.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="card">
+                <h2>Keahlian</h2>
+                <div class="skills-list">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">React</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">Tailwind CSS</span>
+                    <span class="skill">Express.js</span>
+                    <span class="skill">MongoDB</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="card">
+                <h2>Projek</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <div class="project-title">Belajar Git</div>
+                        <div class="project-desc">Repository untuk belajar dasar-dasar Git dan kolaborasi di GitHub, lengkap dengan contoh kode dan dokumentasi.</div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Aplikasi Kalkulator</div>
+                        <div class="project-desc">Aplikasi kalkulator sederhana berbasis JavaScript yang mendukung operasi matematika dasar dengan tampilan modern.</div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">Portfolio Website</div>
+                        <div class="project-desc">Website portfolio pribadi dengan tema gelap, menampilkan keahlian, projek, dan kontak.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="card">
+                <h2>Kontak</h2>
+                <div class="contact">
+                    <a href="mailto:fauzan.najmi@email.com" target="_blank">Email</a>
+                    <a href="https://github.com/fzan25" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/fauzannajmi" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
