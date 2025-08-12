@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sushi Nippon - Pedagang Sushi Jepang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(120deg, #f7e9d0 0%, #f3f3f3 100%);
+      color: #2d2d2d;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+    }
+    .header-content h1 {
+      font-family: 'Kaisei Tokumin', serif;
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px #00000055;
+    }
+    .header-content p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      text-shadow: 1px 1px 6px #00000044;
+    }
+    nav {
+      background: #e63946;
+      padding: 0.7rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ffd166;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .sushi-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .sushi-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px #00000018;
+      width: 270px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 2px solid #e63946;
+      position: relative;
+    }
+    .sushi-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px #e6394633;
+    }
+    .sushi-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+    .sushi-card-content {
+      padding: 1.2rem;
+    }
+    .sushi-card h3 {
+      font-family: 'Kaisei Tokumin', serif;
+      margin: 0 0 0.5rem 0;
+      font-size: 1.3rem;
+      color: #e63946;
+    }
+    .sushi-card p {
+      font-size: 1rem;
+      margin: 0 0 1rem 0;
+      color: #444;
+    }
+    .sushi-card .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #264653;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .sushi-card button {
+      background: #e63946;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .sushi-card button:hover {
+      background: #b71c1c;
+    }
+    footer {
+      background: #264653;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem 0;
+      margin-top: 3rem;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    /* React root styling */
+    #root {
+      margin-top: 2rem;
+    }
+    @media (max-width: 800px) {
+      .sushi-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .sushi-card {
+        width: 90vw;
+      }
+    }
+  </style>
+  <!-- React & ReactDOM CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>🍣 Sushi Nippon</h1>
+      <p>Rasakan kelezatan sushi otentik Jepang, segar & halal!</p>
+    </div>
+  </header>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+  <main>
+    <section id="menu">
+      <h2 style="font-family:'Kaisei Tokumin',serif;color:#e63946;text-align:center;margin-bottom:2rem;">Menu Sushi Pilihan</h2>
+      <div id="root"></div>
+    </section>
+    <section id="tentang" style="margin-top:3rem;">
+      <h2 style="font-family:'Kaisei Tokumin',serif;color:#e63946;">Tentang Kami</h2>
+      <p>
+        Sushi Nippon berdiri sejak 2024, menghadirkan cita rasa Jepang asli dengan bahan-bahan segar pilihan. Kami berkomitmen menyajikan sushi terbaik untuk Anda, dengan sentuhan budaya Jepang yang kental di setiap hidangan.
+      </p>
+    </section>
+    <section id="kontak" style="margin-top:3rem;">
+      <h2 style="font-family:'Kaisei Tokumin',serif;color:#e63946;">Kontak</h2>
+      <p>
+        📍 Jl. Sakura No. 88, Jakarta<br>
+        📞 0812-3456-7890<br>
+        📧 info@sushinippon.co.id
+      </p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Sushi Nippon. Dibuat dengan ❤️ dan semangat Jepang.
+  </footer>
+
+  <script src="belajarjs.js"></script>
+  <script type="text/babel">
+    const sushiMenu = [
+      {
+        name: "Salmon Nigiri",
+        desc: "Irisan salmon segar di atas nasi sushi, disajikan dengan wasabi.",
+        price: "Rp 28.000",
+        img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Tuna Maki",
+        desc: "Gulungan nasi dengan tuna segar dan nori, rasa klasik Jepang.",
+        price: "Rp 24.000",
+        img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Ebi Tempura Roll",
+        desc: "Sushi roll dengan udang tempura renyah, saus spesial.",
+        price: "Rp 32.000",
+        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Tamago Sushi",
+        desc: "Sushi telur manis khas Jepang, lembut dan gurih.",
+        price: "Rp 18.000",
+        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "Unagi Kabayaki",
+        desc: "Belut panggang dengan saus kabayaki, rasa manis gurih.",
+        price: "Rp 45.000",
+        img: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        name: "California Roll",
+        desc: "Sushi roll isi crab stick, alpukat, dan mentimun, favorit semua orang.",
+        price: "Rp 27.000",
+        img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80"
+      }
+    ];
+
+    function SushiCard({ sushi }) {
+      const [added, setAdded] = React.useState(false);
+      return (
+        <div className="sushi-card">
+          <img src={sushi.img} alt={sushi.name} />
+          <div className="sushi-card-content">
+            <h3>{sushi.name}</h3>
+            <span className="price">{sushi.price}</span>
+            <p>{sushi.desc}</p>
+            <button
+              onClick={() => {
+                setAdded(true);
+                setTimeout(() => setAdded(false), 1200);
+              }}
+              disabled={added}
+            >
+              {added ? "Ditambahkan!" : "Tambah ke Keranjang"}
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    function SushiList() {
+      return (
+        <div className="sushi-list">
+          {sushiMenu.map((sushi, idx) => (
+            <SushiCard sushi={sushi} key={idx} />
+          ))}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<SushiList />);
+  </script>
+</body>
+</html>
