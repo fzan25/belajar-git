@@ -1,0 +1,259 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    /*guna untuk tidak ada kolom di pinggir web*/
+}
+
+/*light mode*/
+ :root{
+    --primary-color : white;
+    --secondary-color : black;
+}
+
+/* dark mode*/
+.dark-thame{
+    --primary-color : black;
+    --secondary-color : white;
+}
+
+header{
+    background-color: var(--primary-color);
+    height: 100vh;
+    width: 100%;
+}
+
+#baground{
+
+    width: 500px;
+    height: auto;
+    position: absolute;
+    right: 100px;
+    top: 19%;
+    color: var(--secondary-color);
+    border-radius: 100%;
+    box-shadow: 0px -2px 100px var(--secondary-color),
+    inset 0px -2px 50px var(--secondary-color);/*inset gunanya untuk di dalam*/
+
+}
+
+
+
+header .intro{
+    position: relative;
+    top: 30%;
+    margin-left: 50px;
+}
+
+header .intro h1{
+    text-align: left;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Bungee", sans-serif;
+    color: var(--secondary-color);
+    
+}
+.benner-title{
+    width: 50ch;
+    overflow: hidden;
+    white-space: nowrap;
+
+    border-right: 2px solid var(--secondary-color);
+
+animation: typing 2s steps(50) 2s infinite alternate;
+}
+@keyframes typing{
+    from{
+        width: 0ch;
+    }
+
+    to{
+        width: 50ch;
+    }
+}
+
+
+header .intro p{
+    font-size: 18px;
+    color: var(--secondary-color);
+    padding-top: 5px;
+}
+
+header .intro button{
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: rgb(89, 89, 250);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+header .icons-whatsapp{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header .navbar{
+    display: flex;
+    background-color:#2b2b2b;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+}
+
+header .navbar ul{
+    text-align: center;
+    list-style-type: none;/*guna untuk menghappus desain dari list*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+header .navbar li{
+    margin-right: 0;
+}
+
+header .navbar a{
+    font-size: 20px;
+    font-weight: bold;
+    color :#f2f2f2;
+    text-align: center;
+    padding: 35px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.navbarrr{
+    color: white;
+    font-size: 30px;
+    display: none;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {/*maksudnya ketika screen berada di 768 atau di layar tablet program yang di jalankan akan yang ini*/
+  
+  header .navbar .hidden{
+        display: none;
+    }
+    header .navbar{
+        flex-wrap: wrap;
+    }
+    header .navbar ul {
+   
+     flex-direction: column;
+     width: 100%;
+    }
+
+    header .navbar li{
+        margin-bottom: 10px;
+    }
+    
+    .navbarrr{
+        
+        display: flex;
+        text-align: center;
+    }
+    
+}
+
+
+
+header #iconss{
+    width: 50px;
+    height: auto;
+    border-radius: 100%;
+}
+
+header .logo{
+    color: white;
+    font-size: 20px;
+    padding: 14px 16px;
+    margin: 0;
+}
+#services {
+    transition: max-height 0.5s ease;
+}
+
+
+main .services-container{
+    text-align: center;
+
+}
+
+main .services-title h1{
+    font-size: 30px;
+    margin-top: 30px;
+    padding: 5px;
+}
+main .services-title p{
+    font-size: 18px;
+}
+
+main .services-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .services-item img{
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border-radius: 100%;
+}
+
+main .services-item p{
+    font-size: 20px;
+    font-family: 'comic sans ms';
+    text-align: center;
+}
+
+main #gallry{
+    background-color: var(--secondary-color);
+}
+
+main .gallery-container{
+    text-align: center;
+}
+
+main .gallery-title h1{
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+main .gallery-title p{
+    font-size: 18px;
+    color: var(--secondary-color);
+    padding-top: 5px;
+}
+
+main .gallery-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+}
+
+main .gallery-list-container img{
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+    border-radius: 100%
+    
+}
+main .gallery-list-container img:hover{
+    /* Shadow ke dalam (inset) akan terlihat jika ada perbedaan warna dengan background dan ukuran shadow tidak nol */
+    box-shadow: 0 0 30px 10px rgb(255, 140, 255), 
+                inset 0 0 50px 20px rgb(255, 140, 255);
+}

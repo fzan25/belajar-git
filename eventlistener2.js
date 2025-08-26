@@ -30,3 +30,4 @@ b.addEventListener('click', setColor);
 b.addEventListener('click', setText);
 b.addEventListener('mouseover', setBorder)
 b.addEventListener('mouseout', offBorder)
+
